@@ -1,3 +1,5 @@
+
+
 CREATE DATABASE reto2;
 USE reto2;
 
@@ -25,7 +27,7 @@ CREATE TABLE restaurants(
 
 CREATE TABLE bookings(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    date_hour TIMESTAMP,
+    date_hour TIMESTAMP NOT NULL,
     num_persons INT NOT NULL,
     any_comment VARCHAR(200),
     user_id INT,
@@ -40,7 +42,7 @@ CREATE TABLE bookings(
 CREATE TABLE reviews(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     comment VARCHAR(500),
-    score INT,
+    score INT NOT NULL,
     user_id INT,
     restaurant_id INT,
     booking_id INT,
